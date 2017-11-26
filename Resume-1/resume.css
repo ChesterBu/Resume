@@ -1,0 +1,344 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #efefef;
+    color: white;
+
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.topNavBar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.topNavBarDiv {
+    padding: 20px 18px;
+}
+
+.topNavBar .logo {
+    padding-top: 1px;
+    font-size: 22px;
+}
+
+.topNavBar .logo .rs {
+    color: #e6686a;
+
+}
+
+.topNavBar .logo .card {
+    color: #9a9da2;
+
+}
+
+.topNavBar nav {
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.topNavBar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topNavBar nav ul > li {
+    float: left;
+    margin: 0 17px;
+
+}
+
+.topNavBar nav ul a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold
+}
+
+.topNavBar nav ul li:hover {
+    border-bottom: 3px solid #d3150e;
+}
+
+.banner {
+    background: url("img/rs-cover.jpg") center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 515px;
+}
+
+.bannerMask {
+    height: 515px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main {
+    color: #000;
+    margin-top: -340px;
+}
+
+.userCard {
+    max-width: 940px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.userCard .cardContent {
+    padding: 50px;
+}
+
+.userCard .picture {
+    float: left;
+}
+
+.userCard .text {
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+
+.userCard .text .welcome {
+    background-color: #e6686a;
+    color: #ffffff;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.userCard .text .triangle {
+    display: block;
+    border: 10px solid transparent;
+    width: 0;
+    border-left-color: #e6686a;
+    border-top-width: 0;
+    position: absolute;
+    left: 4px;
+    top: 100%;
+}
+
+.userCard .text h1 {
+    margin-top: 18px;
+}
+
+.userCard .text hr {
+    margin: 20px 0;
+}
+
+.userCard .text dl dt,
+.userCard .text dl dd {
+    float: left;
+    padding: 5px 0;
+}
+
+.userCard .text dl dt {
+    width: 30%;
+    font-weight: bold;
+}
+
+.userCard .text dl dd {
+    width: 70%;
+}
+
+.userCard > footer.media {
+    text-align: center;
+    background-color: #e6686a;
+}
+
+.userCard > footer.media > a {
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    margin: 16px;
+}
+
+.userCard > footer.media > a:hover {
+
+    background: #CF5D5F;
+}
+
+.userCard svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    vertical-align: top;
+}
+
+.downloadWrap {
+    text-align: center;
+}
+
+.download {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 55px;
+    border: 1px solid #cdcfd1;
+    background-color: #efefef;
+    border-radius: 2px;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 35px 0;
+    transition: box-shadow 0.2s;
+}
+
+.download:hover {
+    box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.selfIntroduction {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.skills,
+.portfolio {
+    max-width: 940px;
+    margin: 60px auto 0 auto;
+}
+
+.skills h2,
+.portfolio h2 {
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.skills > ol {
+    background-color: #fff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+}
+
+.skills > ol > li {
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.skills > ol > li:nth-child(even) {
+    float: right;
+}
+
+.skills h3 {
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+
+.progressBar {
+    height: 5px;
+    background-color: #fae1e1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #e6686a;
+    width: 50%;
+    border-radius: 2px;
+}
+
+.portfolio {
+    text-align: center;
+}
+
+.portfolio nav {
+    display: inline-block;
+    margin-top: 32px;
+
+}
+
+.portfolio nav ol {
+    display: inline-block;
+    list-style: none;
+    color: #000000;
+
+}
+
+.portfolio nav ol li {
+    float: left;
+    margin-left: 40px;
+}
+
+.portfolio nav ol li:first-child {
+    margin-left: 1px;
+}
+
+.portfolio nav ol li:hover {
+    cursor: pointer;
+}
+
+.bar {
+    height: 5px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 5px 0 28px;
+}
+
+.barInner {
+    height: 100%;
+    background-color: #e6686a;
+    border-radius: 2px;
+    transition: all 0.3s;
+
+}
+
+.portfolio > nav .bar.state-1 .barInner {
+    margin-left: 0px;
+    width: 50px;
+}
+
+.portfolio > nav .bar.state-2 .barInner {
+    margin-left: 65px;
+    width: 50px;
+}
+
+.portfolio > nav .bar.state-3 .barInner {
+    margin-left: 140px;
+    width: 96px;
+}
+
+section.portfolio .works {
+    position: relative;
+    padding-bottom: 100px;
+
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small {
+    position: absolute;
+}
+
