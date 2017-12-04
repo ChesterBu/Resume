@@ -15,4 +15,5 @@
  * 熟悉HTML(5)、CSS(3),能够编写符合W3C规范的HTML和CSS
 ## JavaScript
  * 熟悉原生Javascript
-
+## NodeJs
+ * 了解NodeJs
