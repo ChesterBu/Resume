@@ -9,17 +9,34 @@
     <link rel="stylesheet" href="resume.css">
 </head>
 <body>
-<div class="topNavBar">
+<div class="siteWelcome active" id="siteWelcome">
+    <div class="loading"></div>
+</div>
+<div class="topNavBar" id="topNavBar">
     <div class="topNavBarDiv clearfix">
         <a href="#" class="logo" style="float:left;">
-            <span class="rs">Chester</span> <span class="card">card</span>
+            <span class="rs">Chester</span><span class="card">card</span>
         </a>
-        <nav style="float:right;">
+        <nav style="float:right;" class="menu">
             <ul class="clearfix">
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
+                <li><a href="#siteAbout">关于</a></li>
+                <li><a href="#siteSkills">技能</a></li>
+                <li>
+                    <a href="#siteWorks">作品</a>
+                    <ul class="submenu">
+                        <li>作品1</li>
+                        <li>作品2</li>
+                        <li>作品3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">博客</a>
+                    <ul class="submenu">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                    </ul>
+                </li>
                 <li><a href="#">日历</a></li>
                 <li><a href="#">联系方式</a></li>
                 <li><a href="#">其他</a></li>
@@ -31,7 +48,7 @@
     <div class="bannerMask"></div>
 </div>
 <main>
-    <div class="userCard">
+    <div data-x class="userCard" id="siteAbout">
         <div class="cardContent clearfix">
             <div class="picture">
                 <img src="img/robert_WP-1-299x347.jpg" width="299" height="347" alt="avator">
@@ -75,7 +92,7 @@
         ...........
     </p>
 </main>
-<section class="skills">
+<section data-x class="skills" id="siteSkills">
     <h2>技能</h2>
     <ol class="clearfix">
         <li>
@@ -116,7 +133,7 @@
         </li>
     </ol>
 </section>
-<section class="portfolio">
+<section data-x class="portfolio" id="siteWorks">
     <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -127,17 +144,6 @@
         <div id="portfolioBar" class="bar state-1">
             <div class="barInner"></div>
         </div>
-        <script>
-            portfolio1.onclick = function () {
-                portfolioBar.className = "bar state-1"
-            }
-            portfolio2.onclick = function () {
-                portfolioBar.className = "bar state-2"
-            }
-            portfolio3.onclick = function () {
-                portfolioBar.className = "bar state-3"
-            }
-        </script>
     </nav>
     <div class="works" style="height: 597px;">
         <div class="big" style="top: 0;left: 0;">
@@ -151,6 +157,92 @@
         </div>
     </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+<script>
+    portfolio1.onclick = function () {
+        portfolioBar.className = "bar state-1";
+    };
+    portfolio2.onclick = function () {
+        portfolioBar.className = "bar state-2";
+    };
+    portfolio3.onclick = function () {
+        portfolioBar.className = "bar state-3";
+    };
+    document.querySelector('#siteWelcome').classList.remove('active');
 
+    function findClosest() {
+        let specialTags = document.querySelectorAll('[data-x]');
+        let minIndex = 0;
+        for (let i = 0; i < specialTags.length; i++) {
+            if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+                minIndex = i;
+            }
+        }
+        specialTags[minIndex].classList.remove('offset');
+        let id = specialTags[minIndex].id;
+        let a = document.querySelector('a[href="#' + id + '"]');
+        let li = a.parentNode;
+        let brothersAndMe = li.parentNode.children;
+        for (let i = 0; i < brothersAndMe.length; i++) {
+            brothersAndMe[i].classList.remove('highlight');
+        }
+        li.classList.add('highlight');
+    }
+
+    let specialTags = document.querySelectorAll('[data-x]');
+    for (let i = 0; i < specialTags.length; i++) {
+        specialTags[i].classList.add('offset');
+    }
+    findClosest();
+    window.onscroll = function () {
+        if (window.scrollY > 0) {
+            topNavBar.classList.add('sticky');
+        } else {
+            topNavBar.classList.remove('sticky');
+        }
+        findClosest();
+    };
+    let liTags = document.querySelectorAll('nav.menu > ul > li');
+    for (let i = 0; i < liTags.length; i++) {
+        liTags[i].onmouseenter = function (x) {
+            x.currentTarget.classList.add('active');
+        };
+        liTags[i].onmouseleave = function (x) {
+            x.currentTarget.classList.remove('active');
+        };
+    }
+    let aTags = document.querySelectorAll('nav.menu > ul > li > a');
+
+    function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+    }
+
+    requestAnimationFrame(animate);
+    for (let i = 0; i < aTags.length; i++) {
+        aTags[i].onclick = function (e) {
+            e.preventDefault();
+            let a = e.currentTarget;
+            let top = document.querySelector(a.getAttribute('href')).offsetTop;
+            let currentTop = window.scrollY;
+            let targetTop = top - 100;
+            let s = targetTop - currentTop;//路径
+            let coords = {y: currentTop}; // 起始位置
+            let t = Math.abs((s / 100) * 300); // 时间
+            if (t > 500) {
+                t = 500;
+            }
+            new TWEEN.Tween(coords) // 起始位置
+                .to({y: targetTop}, t) // 结束位置 和 时间
+                .easing(TWEEN.Easing.Cubic.InOut)// 缓动类型
+                .onUpdate(function () {
+                    // coords.y 已经变了
+                    window.scrollTo(0, coords.y); // 如何更新界面
+                })
+                .start(); // 开始缓动
+        }
+    }
+
+</script>
 </body>
 </html>
