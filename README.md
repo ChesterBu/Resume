@@ -5,7 +5,8 @@
 ### 卜宇星 / 21 / 男
 ### 英语水平: CET-6
 ### 学历： 本科
-### 手机：18009298575, 邮箱: bydbyx@icloud.com
+### 手机：18009298575 
+### 邮箱: bydbyx@icloud.com
 ### 博客地址: http://www.jianshu.com/u/4aaf75f3e2b6, 
 ### GitHub地址: https://github.com/ChesterBu
 
