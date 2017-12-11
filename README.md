@@ -18,3 +18,5 @@
  * 熟悉原生Javascript
 ## NodeJs
  * 了解NodeJs
+## 框架
+ * 了解Underscore.Js，JQuery
