@@ -171,12 +171,25 @@
             <div class="swiper-button-next"></div>
         </div>
     </section>
+    <section class="message">
+        <h2>留言</h2>
+        <ol id="messageList"></ol>
+        <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+            <label >name:<input type="text" name="name"></label>
+            <label >content:<input type="text" name="content"></label>
+            <input type="submit" value="提交">
+        </form>
+
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+    
     <script src="./js/autoSlideup.js"></script>
     <script src="./js/initSwiper.js"></script>
     <script src="./js/smoothNav.js"></script>
     <script src="./js/stickyBar.js"></script>
+    <script src="./js/message.js"></script>
     <script>
         document.querySelector('#siteWelcome').classList.remove('active');
     </script>
