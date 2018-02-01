@@ -12,7 +12,7 @@
 
 ### 邮箱: chesterbu1997@gmail.com
 
-### 博客地址: http://www.jianshu.com/u/4aaf75f3e2b6
+### 博客地址: https://github.com/ChesterBu/Blog
 
 ### GitHub地址: https://github.com/ChesterBu
 
@@ -28,8 +28,10 @@
 
 ### NodeJs
 
-* 熟悉NodeJs
+* 熟悉NodeJs，有Express使用经验
 
 ### 框架
 
 * 熟悉underscore.Js，JQuery
+* 熟悉vue.js自己实现过简单的MVVM框架
+
