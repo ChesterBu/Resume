@@ -90,4 +90,4 @@ const css3 = `
  */
 `;
 
-export default{css1,css2,css3,md};
+export {css1,css2,css3,md};

@@ -1,15 +1,15 @@
-import obj from './content.js';
-const {
+import {
     css1,
     css2,
     css3,
     md
-} = obj;
+} from './content.js';
+
 
 function writeCss(prefix, code) {
     let domCode = document.querySelector('#code');
     let n = 0;
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject) => {
         let id = setInterval(() => {
             n += 1;
             domCode.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css);
@@ -21,13 +21,13 @@ function writeCss(prefix, code) {
             }
         }, 70);
     });
-    
+
 }
 
 function writeMarkdown(markdown) {
     let domPaper = document.querySelector('#paper>.content');
     let n = 0;
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject) => {
         let id = setInterval(() => {
             n += 1;
             domPaper.innerHTML = markdown.substring(0, n);
@@ -38,7 +38,7 @@ function writeMarkdown(markdown) {
             }
         }, 35);
     });
-    
+
 }
 
 function createPaper() {
@@ -61,13 +61,11 @@ function convertMarkdownToHtml() {
 
 async function animateResume() {
     await writeCss('', css1);
-    await createPaper();
+    createPaper();
     await writeMarkdown(md);
     await writeCss(css1, css2);
-    await convertMarkdownToHtml();
+    convertMarkdownToHtml();
     await writeCss(css1 + css2, css3);
 }
 
 animateResume();
-
-
