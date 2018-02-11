@@ -20,21 +20,14 @@
 
 ## Skill. 技能清单
 
-### HTML / CSS
-
 - 熟悉HTML(5)、CSS(3),能够编写符合W3C规范的HTML和CSS
 
-### JavaScript
+- 熟悉原生JavaScript，ES6
 
-- 熟悉原生JavaScript
-
-### NodeJs
-
-- 熟悉NodeJs，有Express使用经验
-
-### 框架
+- 了解NodeJs，有Express使用经验
 
 - 熟悉underscore.Js，JQuery
+
 - 熟悉vue.js，自己实现过简单的MVVM框架
 
 ****
