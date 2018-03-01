@@ -24,7 +24,7 @@
 
 - 熟悉原生JavaScript，ES6
 
-- 了解NodeJs，有Express使用经验
+- 熟悉NodeJs，有Express使用经验
 
 - 熟悉underscore.Js，JQuery
 
