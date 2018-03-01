@@ -37,9 +37,14 @@
 ### Wheels
 
 - 原生JS实现的前端常用轮子库，包括EventEmitter、简单的MVVM框架等
-- GItHub地址：https://github.com/ChesterBu/Wheels
+- GitHub地址：https://github.com/ChesterBu/Wheels
 
 ### 画一只皮卡丘
 
 - async await 实现画一只皮卡丘
-- GItHub地址：https://github.com/ChesterBu/Pikachu
+- GitHub地址：https://github.com/ChesterBu/Pikachu
+
+### VueBook
+
+- vue + vue-router + vuex + nodejs 实现图书商城
+- GitHub地址：https://github.com/ChesterBu/VueBook
